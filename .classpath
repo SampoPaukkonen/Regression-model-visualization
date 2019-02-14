@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_191"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="Jars/ejml-cdense-0.37.1.jar"/>
+	<classpathentry kind="lib" path="Jars/ejml-core-0.37.1.jar"/>
+	<classpathentry kind="lib" path="Jars/ejml-ddense-0.37.1.jar"/>
+	<classpathentry kind="lib" path="Jars/ejml-dsparse-0.37.1.jar"/>
+	<classpathentry kind="lib" path="Jars/ejml-experimental-0.37.1.jar"/>
+	<classpathentry kind="lib" path="Jars/ejml-fdense-0.37.1.jar"/>
+	<classpathentry kind="lib" path="Jars/ejml-simple-0.37.1.jar"/>
+	<classpathentry kind="lib" path="Jars/ejml-zdense-0.37.1.jar"/>
+	<classpathentry kind="lib" path="Jars/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="Jars/junit-4.13-beta-2.jar"/>
+	<classpathentry kind="lib" path="Jars/junit.jar"/>
+	<classpathentry kind="lib" path="Jars/scala-xml_2.12-1.2.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="Jars/scalafx_2.12-8.0.181-R13.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

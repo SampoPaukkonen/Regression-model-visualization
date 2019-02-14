@@ -1,0 +1,17 @@
+As of 10.4 there has been no major changes. All of my time has went to other courses and exams.
+
+What there is still left to do is
+
+i) Implement a distinguishable difference between Linear and Polynomial regression. This will be done by implementing
+classes for both of them. Since linear regression is just a special case of polynomial regression, linear regression
+will use polynomial regression under the hood.
+
+ii) Finish up all the small details in the GUI. I'm possible changing the GUI so that you can see the details of the
+regression model with the picture at the same time.
+
+iii) Write Unit Tests that check that the math behind the model is correct
+
+iv) Write a proper documentation about the program
+
+v) If I have the time left, implement a logistic regression. If I get everything done in the list before in a reasonable
+time, then the implementation should be doable.

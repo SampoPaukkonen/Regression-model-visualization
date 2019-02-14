@@ -1,0 +1,61 @@
+Major changes as of 24.3 are listed by the class or classes they concern.
+Encountered errors are and the time used is listed after that.
+
+GeneralRegressionModel:
+	GeneralRegressionModel will be the base trait for all regression models. How regression models work from now on is
+	that they have their own parameters, they extend GeneralRegressionModel and they implement the required methods while
+	possibly having their own one's as well. Now method deliverCoefficients is no longer dependent on parameters.
+
+GUI:
+	A lot of the functions that GUI uses are now transferred to GUIHelperFunctions. This way the difference of the
+	front end side of GUI and back end side of GUIHelperFunctions is more clear while also GUI itself is much more 
+	readable from now on.
+	
+	I implemented an interactive help window for the user where he/she can press a topic and receive adequate information.
+	
+	User can also now modify the existing Graphs by giving them a new maximum x value. 
+
+GUIHelperFunctions:
+	A ton of refactoring by removing methods such as notifyInvalidFileType, notifyInvalidCSVFile and classes like
+	InvalidCSVFileData and MissingCSVFileData. Now all communication with the user is done with the method
+	invalidDataDetected which takes parameters content: String, titleString: String, header: String.
+	Gone is also the redundant way of making a TextInputDialog every time something is needed from the user.
+	Method userInputBox does the job from now on.	
+	Nearly all of the exceptions are now handled by the classes InvalidInput and InvalidFileData. Now their error messages
+	are actually used compared to previous implementations.
+	
+	GUIHelperFunctions also has the method for the help window in GUI.
+	
+Graph -> PolynomialGraph:
+	Graph is refactored to be a PolynomialGraph since now all Graphs have a common trait GeneralGraph. With GeneralGraph
+	it's easier to keep track of the methods every Graph will have.
+	PolynomialGraph now handles better the data its given. Now its maximum x value can be changed, the original data 
+	is given by the method dataPoints opposed to the previous public val parameter. When PolynomialGraph receives data 
+	points it automatically sorts them by the x value.
+
+GeneralGraph:
+	A general trait for all graphs from now on. Is used to handle the common methods every graph will have.
+
+
+Parser:
+	Improved the exception catching capabilities of Parser. Since XML object from scala.xml can apparently detect bad
+	formatting of the XML file when it is being opened, the XMl reading is now more secure.
+
+Challenges:
+	I fought a long time to get the help window to work they way I wanted but the usage of HBox object from ScalaFX 
+	saved the day. Other than that, everything has gone smoothly.
+	
+What next:
+	I have to check the various types of CSV files to handle them better. Finish the methods responsible for XML reading
+	and find a way to change dynamically either x and y axes of the XYChart or some more efficient way to calculate 
+	the needed plot points. Now what can happen is if user gives too large value, system can run out of memory.
+	If the X-Y axis can be dynamically changed then recourses can be saved in computation. 
+	I might need to put upper limit to both the x value and the order of the polynomial. 
+	While everything works in theory, in practise with large values of x (especially with big polynomial orders)
+	load times become distracting and the plot will not be continuous since the default dx (which is 0.01) won't do the job.
+	
+	Once the issues above are fixed the project is more than ready.
+
+
+Time used:
+	I would say probably around 14 hours.  

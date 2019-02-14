@@ -1,0 +1,53 @@
+Major changes as of 11.3 are listed by the class or classes they concern.
+Encountered errors are and the time used is listed after that.
+
+DataCollector:
+	Case classes have been made for error handling. With the created exception classes InvalidFileData, 
+	InvalidCSVFileData, InvalidXMLFileData, MissingCSVFileData, MissingXMLFileData, EmptyFileData accurate 
+	information can be presented for the user when an exception happens. Exception handling is centered around
+	invalid (meaning non-numeric) data and missing data. Possibility of more than two pairs of data points is not
+	concerned as it is responsibility of the user to give accurate data.
+	DataCollector now also has most if not all possible exceptions handled for CSV file type. 
+	Exceptions for XML file are still under work as I got the scala xml library to work only last week.
+	
+GUI: GUI has had the most changes done to it. Biggest ones are that now Graphs will be saved in the same session,
+	Graphs can be named and loaded in the same session. When a session ends all data is lost.
+	GUI now uses class called GUIHelperFunctions which has functions used for exception handling so that the code
+	in GUI remain readable. GUI also has exception handling in the form of checking that the user input is correct. 
+	In this case it means that the user gives the highest order (meaning integer greater than or equal to two) of the
+	polynomial. Cases of non-numeric, fraction of negative input have been taken into account. 
+	When the user gives name for the graph he/she is warned that duplicates by name are removed automatically. If the
+	user gives no input regarding the name of the graph a generic of of "A in terms of B" is used where A is the name
+	of the y parameter and B is the name of the x parameter (first tuple in the CSV file of names under the
+	variableNames tag in the XML version).
+	GUI uses scalaFX fileChooser to select the desired file. What this means is that user can graphically determine the
+	file given for the program.
+	
+GUIHelperFunctions:
+	GUIHelperFunctions consist of functions used to display information from exception to the user. All the functions
+	in the GUIHelperFunctions are as descriptive as possible.
+
+Parser:
+	Parser has had changes to it via exception handling and the first stages of XML reading.
+	
+Loader:
+	Loader has had minor changes such as the feature of automatically removing Graphs with duplicate names.
+
+	
+Challenges:
+	Challenges have revolved around user input, displaying information and exception handling. 40% of the time used
+	have been wondering what questions I need to ask. 40% of the time have been actually asking the questions and 
+	20% have been actual coding. Most if not all problems have had something to do with the tools in use.
+	Everything have been solved with the use of Google, Reddit, Youtube and Stack Overflow.
+
+Time:
+	I approximate that during the last two weeks I've used total of 25 to 28 hours.
+	All in all I'm ahead of the plan because most of the problems have been solved in a short span.
+	
+	
+	
+
+
+
+
+

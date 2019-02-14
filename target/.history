@@ -1,0 +1,8 @@
+scala
+console
+val a: Short = 1
+console
+var a  = 7
+console
+version
+console
